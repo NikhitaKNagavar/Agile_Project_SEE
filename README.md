@@ -23,7 +23,7 @@ Recommends captions using **TF-IDF** vectorization and **cosine similarity** fro
 ├── .env                  # Stores Hugging Face API token (not tracked by Git)
 ├── .gitignore            # Specifies files/folders to be ignored by Git
 ├── .github/workflows/    # Contains GitHub Actions CI workflow
-│   └── main.yml          # Workflow for testing and CI
+│   └── app.yml          # Workflow for testing and CI
 ├── recommender.py        # ML logic for caption recommendation
 ├── requirements.txt      # Python dependencies
 ├── Test_Cases.py         # Unit tests for caption generation and recommendation
