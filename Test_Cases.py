@@ -1,5 +1,5 @@
 import pytest
-from recommender_LLM import recommend_captions_by_mood, generate_caption, get_captions_by_mood
+from recommender import recommend_captions_by_mood, generate_caption, get_captions_by_mood
 
 # ---------------- Positive Test Cases ---------------- #
 
