@@ -18,17 +18,17 @@ Recommends captions using **TF-IDF** vectorization and **cosine similarity** fro
 
 ## Files in This Project
 
-├── .env # Stores Hugging Face API token (not tracked by Git)
-├── .gitignore # Specifies files/folders to be ignored by Git
-├── .github/workflows/ # Contains GitHub Actions CI workflow
-│ └── main.yml # Workflow for testing and CI
-├── recommender.py # ML logic for caption recommendation
-├── requirements.txt # Python dependencies
-├── Test_Cases.py # Unit tests for caption generation and recommendation
+```
 
-yaml
-Copy
-Edit
+├── .env                  # Stores Hugging Face API token (not tracked by Git)
+├── .gitignore            # Specifies files/folders to be ignored by Git
+├── .github/workflows/    # Contains GitHub Actions CI workflow
+│   └── main.yml          # Workflow for testing and CI
+├── recommender.py        # ML logic for caption recommendation
+├── requirements.txt      # Python dependencies
+├── Test\_Cases.py         # Unit tests for caption generation and recommendation
+
+```
 
 ---
 
@@ -39,45 +39,54 @@ Edit
 ```bash
 git clone https://github.com/your-username/Agile_Project_SEE.git
 cd Agile_Project_SEE
-2. Set Up Environment Variables
-Create a .env file in the root directory and add your Hugging Face API token:
+```
 
-env
-Copy
-Edit
+### 2. Set Up Environment Variables
+
+Create a `.env` file in the root directory and add your Hugging Face API token:
+
+```env
 HF_TOKEN=your_huggingface_token_here
-3. Install Dependencies
+```
+
+### 3. Install Dependencies
+
 To install the necessary dependencies for the project, run the following command:
 
-bash
-Copy
-Edit
+```bash
 pip install -r requirements.txt
-This will install the required Python libraries, including streamlit, scikit-learn, and transformers.
+```
 
-4. Run the Streamlit App
-If you have an app file (e.g., app.py), run it with the following command:
+This will install the required Python libraries, including `streamlit`, `scikit-learn`, and `transformers`.
 
-bash
-Copy
-Edit
+### 4. Run the Streamlit App
+
+If you have an app file (e.g., `app.py`), run it with the following command:
+
+```bash
 streamlit run app.py
-Note: If the Streamlit UI is not yet created, this repo primarily runs as a backend/test suite at this stage.
+```
 
-5. Run Tests
-To ensure that everything is working as expected, you can run unit tests using pytest:
+> **Note:** If the Streamlit UI is not yet created, this repo primarily runs as a backend/test suite at this stage.
 
-bash
-Copy
-Edit
+### 5. Run Tests
+
+To ensure that everything is working as expected, you can run unit tests using `pytest`:
+
+```bash
 pytest Test_Cases.py
-License
+```
+
+---
+
+## License
+
 This project is licensed under the MIT License.
 
-Acknowledgments
-Hugging Face for the LLM API
+---
 
-scikit-learn for ML utilities
+## Acknowledgments
 
-Streamlit for rapid UI development
-```
+- Hugging Face for the LLM API
+- scikit-learn for ML utilities
+- Streamlit for rapid UI development
