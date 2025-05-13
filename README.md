@@ -79,12 +79,6 @@ pytest Test_Cases.py
 
 ---
 
-## License
-
-This project is licensed under the MIT License.
-
----
-
 ## Acknowledgments
 
 - Hugging Face for the LLM API
