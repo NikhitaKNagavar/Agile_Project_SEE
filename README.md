@@ -26,7 +26,7 @@ Recommends captions using **TF-IDF** vectorization and **cosine similarity** fro
 │   └── main.yml          # Workflow for testing and CI
 ├── recommender.py        # ML logic for caption recommendation
 ├── requirements.txt      # Python dependencies
-├── Test\_Cases.py         # Unit tests for caption generation and recommendation
+├── Test_Cases.py         # Unit tests for caption generation and recommendation
 
 ```
 
@@ -61,10 +61,10 @@ This will install the required Python libraries, including `streamlit`, `scikit-
 
 ### 4. Run the Streamlit App
 
-If you have an app file (e.g., `app.py`), run it with the following command:
+If you have an app file (e.g., `recommender.py`), run it with the following command:
 
 ```bash
-streamlit run app.py
+streamlit run recommender.py
 ```
 
 > **Note:** If the Streamlit UI is not yet created, this repo primarily runs as a backend/test suite at this stage.
