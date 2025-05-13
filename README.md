@@ -1,23 +1,23 @@
 ```markdown
-# 📸 Instagram Caption Generator
+# Instagram Caption Generator
 
 This project provides a mood-based Instagram caption assistant using both a Machine Learning (ML) recommender and a Large Language Model (LLM) via Hugging Face's API. The app is built using **Streamlit**.
 
 ---
 
-## 🚀 Features
+## Features
 
-### ✨ LLM-Based Caption Generator
+### LLM-Based Caption Generator
 
 Generates creative Instagram captions using the Hugging Face `Mixtral-8x7B-Instruct` model based on image descriptions and selected moods.
 
-### 🔍 ML-Based Caption Recommender
+### ML-Based Caption Recommender
 
 Recommends captions using **TF-IDF** vectorization and **cosine similarity** from a curated mood-tagged caption dataset.
 
 ---
 
-## 📁 Files in This Project
+## Files in This Project
 ```
 
 ├── .env # Stores Hugging Face API token (not tracked by Git)
@@ -32,7 +32,7 @@ Recommends captions using **TF-IDF** vectorization and **cosine similarity** fro
 
 ---
 
-## 🛠️ Setup Instructions
+## Setup Instructions
 
 ### 1. Clone the Repository
 
@@ -63,7 +63,7 @@ If you have an app file (e.g., `app.py`), run:
 streamlit run app.py
 ```
 
-> **Note:** If the Streamlit UI is not yet created, this repo primarily runs as a backend/test suite at this stage.
+> Note: If the Streamlit UI is not yet created, this repo primarily runs as a backend/test suite at this stage.
 
 ### 5. Run Tests
 
@@ -73,17 +73,17 @@ pytest Test_Cases.py
 
 ---
 
-## 📄 License
+## License
 
-This project is licensed under the **MIT License**.
+This project is licensed under the MIT License.
 
 ---
 
-## 🙌 Acknowledgments
+## Acknowledgments
 
-- 🤗 [Hugging Face](https://huggingface.co) for the LLM API
-- 🔢 [scikit-learn](https://scikit-learn.org) for ML utilities
-- 🎈 [Streamlit](https://streamlit.io) for rapid UI development
+- Hugging Face for the LLM API
+- scikit-learn for ML utilities
+- Streamlit for rapid UI development
 
 ```
 
