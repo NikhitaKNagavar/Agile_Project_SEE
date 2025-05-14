@@ -126,14 +126,17 @@ with tab1:
     st.subheader("✨ Hugging Face Caption Generator")
     image = st.file_uploader("Upload a photo (optional)", type=["jpg", "jpeg", "png"])
     description = st.text_area("Describe the photo in words:")
-    hf_mood = st.selectbox("Choose the mood for your caption", [
-        "Humorous", "Romantic", "Introspective", 
-        "Adventurous", "Chill", "Empowering", 
-        "Motivational", "Dreamy", "Sassy", 
-        "Bold", "Confident", "Relatable", "Lazy", "Urban"
-    ])
+
+    hf_mood_options = ["Select a mood...", "Humorous", "Romantic", "Introspective", 
+                       "Adventurous", "Chill", "Empowering", "Motivational", "Dreamy", 
+                       "Sassy", "Bold", "Confident", "Relatable", "Lazy", "Urban"]
+    hf_mood = st.selectbox("Choose the mood for your caption", hf_mood_options)
 
     if st.button("Generate Captions with LLM"):
+        if hf_mood == "Select a mood...":
+            st.warning("Please select a valid mood.")
+            st.stop()
+
         with st.spinner("Crafting your perfect caption..."):
             if not image and not description:
                 st.warning("Please upload a photo and/or provide a description.")
@@ -168,12 +171,15 @@ with tab1:
 # --- ML-Based Caption Recommender --- #
 with tab2:
     st.subheader("🔍 ML-Based Caption Recommender")
-    moods = sorted(set(mood for _, mood in caption_data))
+    moods = ["Select a mood..."] + sorted(set(mood for _, mood in caption_data))
     selected_mood = st.selectbox("Select a mood:", moods)
     input_caption = st.text_input("Enter your caption to match:")
     top_n = st.slider("How many similar captions to suggest?", 1, 5, 3)
 
     if st.button("Get Similar Captions with ML"):
+        if selected_mood == "Select a mood...":
+            st.warning("Please select a valid mood.")
+            st.stop()
         if input_caption:
             try:
                 recommendations = recommend_captions_by_mood(input_caption, selected_mood, top_n)
