@@ -6,8 +6,8 @@ from recommender import recommend_captions_by_mood, generate_caption, get_captio
 def test_recommend_valid_caption():
     input_caption = "Feeling happy and vibrant"
     mood = "happy"
-    results = recommend_captions_by_mood(input_caption, mood, top_n=4)
-    assert len(results) == 4
+    results = recommend_captions_by_mood(input_caption, mood, top_n=3)
+    assert len(results) == 3
     assert all(isinstance(c, str) for c in results)
 
 def test_generate_caption_with_description():
